@@ -1,0 +1,170 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Color and Font Variables */
+:root {
+  --primary-bg-color: #1e1e2f;       /* Dark, professional background */
+  --secondary-bg-color: #282842;     /* Slightly lighter background for sections */
+  --primary-text-color: #ffffff;     /* White text for readability */
+  --accent-color: #6a9fb5;           /* Muted blue for accents */
+  --hover-color: #8abbd9;            /* Lighter blue for hover effects */
+  --project-tile-bg: #2d2d3f;        /* Background color for project tiles */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  line-height: 1.8;
+  padding-top: 60px;
+}
+
+/* Navbar */
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  right: 0; 
+  background-color: var(--secondary-bg-color);
+  padding: 10px 20px;
+  text-align: right; 
+  font-family: var(--font-secondary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+#navbar a {
+  color: var(--primary-text-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  color: var(--hover-color);
+}
+
+/* Welcome Section */
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-bg-color);
+  text-align: center;
+}
+
+#welcome-section h1 {
+  font-size: 2.8rem;
+  color: var(--accent-color);
+}
+
+#job h1 {
+  font-size: 2.4rem;
+  color: var(--primary-text-color);
+  font-family: var(--font-secondary);
+}
+
+/* Projects Section */
+#projects {
+  padding: 50px 20px;
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+}
+
+#projects h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+/* Project Tile */
+.project-tile {
+  background-color: var(--project-tile-bg);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.project-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.project-tile h2 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  font-family: var(--font-secondary);
+  margin-bottom: 15px;
+}
+
+.project-tile p {
+  color: #d0d0d0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  padding-bottom: 20px;
+}
+
+.project-tile strong {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.project-tile ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.project-tile li {
+  color: #c0c0c0;
+  margin-bottom: 8px;
+}
+
+.project-tile a {
+  color: var(--hover-color);
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.project-tile a:hover {
+  color: var(--primary-text-color);
+  text-decoration: underline;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  #welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  #job h1 {
+    font-size: 1.8rem;
+  }
+
+  #projects h1 {
+    font-size: 2rem;
+  }
+
+  .project-tile {
+    font-size: 1rem;
+    padding: 20px;
+    max-width: 90%;
+  }
+}
