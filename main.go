@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	http.Handle("/styles.css", http.FileServer(http.Dir(".")))
+	http.Handle("/script.js", http.FileServer(http.Dir(".")))
 	http.HandleFunc("/", homeHandler)
 
 	fmt.Println("Server running on http://localhost:8080")
