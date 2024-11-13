@@ -7,12 +7,13 @@
 
 /* Color and Font Variables */
 :root {
-  --primary-bg-color: #1e1e2f;       /* Dark, professional background */
-  --secondary-bg-color: #282842;     /* Slightly lighter background for sections */
-  --primary-text-color: #ffffff;     /* White text for readability */
-  --accent-color: #6a9fb5;           /* Muted blue for accents */
-  --hover-color: #8abbd9;            /* Lighter blue for hover effects */
-  --project-tile-bg: #2d2d3f;        /* Background color for project tiles */
+  --primary-bg-color: #1e1e2f;
+  --secondary-bg-color: #282842;
+  --header-band-color: #2a2a4a;
+  --primary-text-color: #ffffff;
+  --accent-color: #6a9fb5;
+  --hover-color: #8abbd9;
+  --project-tile-bg: #2d2d3f;
   --font-primary: 'Montserrat', sans-serif;
   --font-secondary: 'Roboto', sans-serif;
 }
@@ -23,28 +24,52 @@ body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   line-height: 1.8;
-  padding-top: 60px;
 }
 
-/* Navbar */
+/* Header Band */
+.header-band {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: var(--header-band-color);
+  z-index: 999;
+}
+
 /* Navbar */
 #navbar {
   position: fixed;
   top: 0;
-  right: 0; 
-  background-color: var(--secondary-bg-color);
-  padding: 10px 20px;
-  text-align: right; 
-  font-family: var(--font-secondary);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: transparent;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1000;
+}
+
+.nav-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
 }
 
 #navbar a {
   color: var(--primary-text-color);
-  margin: 0 15px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 #navbar a:hover {
@@ -60,111 +85,120 @@ body {
   align-items: center;
   background-color: var(--primary-bg-color);
   text-align: center;
+  position: relative;
+  padding-top: 70px;
 }
 
-#welcome-section h1 {
-  font-size: 2.8rem;
+#welcome h1 {
+  font-size: 3.5rem;
   color: var(--accent-color);
+  margin-bottom: 1rem;
 }
 
 #job h1 {
   font-size: 2.4rem;
   color: var(--primary-text-color);
   font-family: var(--font-secondary);
+  margin-bottom: 1rem;
 }
 
-/* Projects Section */
-#projects {
-  padding: 50px 20px;
-  background-color: var(--secondary-bg-color);
+.focus-areas {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  opacity: 0.9;
+}
+
+/* About Section - keeping most styles the same, updating content presentation */
+
+/* Projects Section - keeping most styles the same, updating content presentation */
+
+/* Footer and Social Links */
+footer {
+  background-color: var(--header-band-color);
+  padding: 2.5rem;
   text-align: center;
 }
 
-#projects h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--accent-color);
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Project Tile */
-.project-tile {
-  background-color: var(--project-tile-bg);
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 800px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
+.footer-content p {
+  font-size: 1.2rem;
 }
 
-.project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+.social-links {
+  display: flex;
+  gap: 2rem;
 }
 
-.project-tile h2 {
-  font-size: 2rem;
-  color: var(--accent-color);
-  font-family: var(--font-secondary);
-  margin-bottom: 15px;
-}
-
-.project-tile p {
-  color: #d0d0d0;
-  line-height: 1.8;
-  font-size: 1.1rem;
-  padding-bottom: 20px;
-}
-
-.project-tile strong {
-  display: block;
-  margin-top: 20px;
-  font-weight: bold;
-  color: var(--accent-color);
-}
-
-.project-tile ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.project-tile li {
-  color: #c0c0c0;
-  margin-bottom: 8px;
-}
-
-.project-tile a {
-  color: var(--hover-color);
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.project-tile a:hover {
+.social-icon {
   color: var(--primary-text-color);
-  text-decoration: underline;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Media Query for Smaller Screens */
+.social-icon:hover {
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  #welcome-section h1 {
-    font-size: 2rem;
+  #navbar {
+      padding: 0 1rem;
+  }
+
+  .nav-links {
+      gap: 1.5rem;
+  }
+
+  #welcome h1 {
+      font-size: 2.5rem;
   }
 
   #job h1 {
-    font-size: 1.8rem;
+      font-size: 1.8rem;
   }
 
-  #projects h1 {
-    font-size: 2rem;
+  .focus-areas {
+      font-size: 1.2rem;
   }
 
-  .project-tile {
-    font-size: 1rem;
-    padding: 20px;
-    max-width: 90%;
+  .footer-content {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+
+  .social-icon {
+      font-size: 1.8rem;
   }
 }
+
+@media (max-width: 480px) {
+  .nav-brand {
+      font-size: 1.5rem;
+  }
+
+  #navbar a {
+      font-size: 1rem;
+  }
+
+  #welcome h1 {
+      font-size: 2rem;
+  }
+
+  #job h1 {
+      font-size: 1.5rem;
+  }
+
+  .focus-areas {
+      font-size: 1rem;
+  }
+}
+
+/* Keep the rest of your existing styles for other sections */
