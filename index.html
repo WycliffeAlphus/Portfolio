@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wycliffe A. Onyango | Full Stack Developer</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header-band"></div>
+    <nav id="navbar">
+        <div class="nav-brand">WAO</div>
+        <div class="nav-links">
+            <a href="#welcome-section" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#socials" class="nav-link">Socials</a>
+            <a href="https://github.com/WycliffeAlphus" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+        <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <section id="welcome-section">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
+            <h1>Hello, I'm Wycliffe</h1>
+        </div>
+        <div class="scroll-indicator">
+            <p>Scroll to explore</p>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am an apprentice Full Stack Developer with a growing focus on cybersecurity, cryptography, and quantum systems. 
+                       I aim to gain experience that spans both traditional web development and emerging technologies, allowing me to bridge 
+                       the gap between conventional systems and cutting-edge security solutions.<br><br>
+                       Currently working on:<br>
+                       IoT security protocol for secure device communication</p>
+                    <!-- <div class="highlight-card">
+                        <div class="highlight-content">
+                            <p class="highlight-title">Currently working on:</p>
+                            <p>IoT security protocol for secure device communication</p>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="skills">
+                    <h3>Technical Expertise</h3>
+                    <div class="skill-categories">
+                        <div class="skill-category">
+                            <h4>Core Technologies</h4>
+                            <ul>
+                                <li>Go (Golang)</li>
+                                <li>JavaScript</li>
+                                <li>HTML5 & CSS3</li>
+                                <li>RESTful APIs</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>DevOps & Tools</h4>
+                            <ul>
+                                <li>Docker</li>
+                                <li>Git & GitHub</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Focus Areas</h4>
+                            <ul>
+                                <li>Cryptographic Systems</li>
+                                <li>Quantum Computing</li>
+                                <li>Network Security</li>
+                                <li>System Architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-tile">
+            <h3>IOT-Device-Security-Protocol</h3>
+            <div class="project-content">
+                <p>This project is at an early stage of development, focusing on building a secure and efficient
+                   communication protocol for IoT devices using Go. My initial work centers on understanding and
+                   setting up TCP/IP servers and clients, laying the groundwork for more complex networking and security tasks.</p>
+                
+                <p>I am currently experimenting with basic client-server communication models in Go, exploring concurrency with goroutines
+                   to handle multiple client connections, and studying the MQTT protocol to prepare for future phases.
+                   As I progress, I aim to incorporate core security practices, including authentication, authorization, and encryption (TLS),
+                   into the project.</p>
+
+                <div class="project-details">
+                    <h4>Key Technologies:</h4>
+                    <ul>
+                        <li>Go for networking and concurrent programming with goroutines</li>
+                        <li>MQTT Protocol (planned) for structured publish/subscribe communication</li>
+                        <li>TLS Encryption (planned) for secure data transfer</li>
+                        <li>Wireshark (planned) for network traffic analysis to verify encryption and integrity</li>
+                    </ul>
+                </div>
+
+                <div class="project-details">
+                    <h4>Current Progress and Goals:</h4>
+                    <p>This project is just beginning, with an initial focus on TCP/IP communication fundamentals.
+                       Over time, I will incorporate security layers and real-time testing for a robust IoT device communication framework.
+                       Through each stage, I'm working toward gaining practical, hands-on experience in IoT security and network programming with Go.</p>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/WycliffeAlphus/IOT-Device-Security-Protocol" target="_blank" rel="noopener noreferrer">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="socials">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Let's Connect</h3>
+                <p>I'm always interested in new opportunities and collaborations. 
+                   Feel free to reach out through any of my social channels.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/WycliffeAlphus" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Wycliffe A. Onyango. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
