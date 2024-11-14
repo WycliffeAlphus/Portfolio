@@ -9,21 +9,21 @@ let timeout;
 
 welcomeSection.addEventListener('mousemove', (e) => {
     if (timeout) clearTimeout(timeout);
-    
+
     const rect = welcomeSection.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    
+
     // Calculate movement range (px)
     const moveRange = 50;
-    
+
     // Calculate movement based on mouse position
     const moveX = (((x / rect.width) - 0.5) * moveRange).toFixed(1);
     const moveY = (((y / rect.height) - 0.5) * moveRange).toFixed(1);
-    
+
     // Apply smooth transform
     scrollIndicator.style.transform = `translate(calc(-50% + ${moveX}px), ${moveY}px)`;
-    
+
     // Reset position after mouse stops moving
     timeout = setTimeout(() => {
         scrollIndicator.style.transform = 'translateX(-50%)';
@@ -81,9 +81,9 @@ window.addEventListener('scroll', () => {
 
 // Smooth scrolling for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         // Close mobile menu if open
         mobileMenuBtn.classList.remove('active');
         navLinksContainer.classList.remove('active');
