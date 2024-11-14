@@ -11,8 +11,8 @@ func main() {
 	http.Handle("/script.js", http.FileServer(http.Dir(".")))
 	http.HandleFunc("/", homeHandler)
 
-	fmt.Println("Server running on http://localhost:8080")
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("Server running on http://localhost:8081")
+	http.ListenAndServe(":8081", nil)
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
